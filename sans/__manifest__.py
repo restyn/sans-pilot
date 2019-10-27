@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'ACHOSA',
-    'version': '13.0.1.02',
+    'name': 'SANS',
+    'version': '13.0.1.03',
     'category': 'Studio',
     "sequence": 1,
     'website': 'https://restyn-sans-demo.odoo.com/',
