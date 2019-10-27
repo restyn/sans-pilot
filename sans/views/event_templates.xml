@@ -97,4 +97,17 @@
         </xpath>
     </data>
     </template>
+    <template id="registration_template" inherit_id="website_event_sale.registration_template">
+        <data>
+            <xpath expr="//t[@t-set='price']" position="replace">
+            </xpath>
+        </data>
+    </template>
+    <template id="registration_complete" inherit_id="website_event.registration_complete">
+        <data>
+            <xpath expr="//table" position="replace">
+                <h3><span t-esc="len(attendees)" /> Registered</h3>
+            </xpath>
+        </data>
+    </template>
 </odoo>
