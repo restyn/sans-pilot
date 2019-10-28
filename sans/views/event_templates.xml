@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+<data>
     <template id="registration_attendee_details_address" inherit_id="website_event.registration_attendee_details" name="Registration Attendee Details with Address">
     <data>
         <!-- Attendee specific questions -->
@@ -37,7 +38,7 @@
                                                 <div class="col-lg my-2">
                                                     <label>Address</label>
                                                     <input class='form-control' type='text'
-                                                           t-attf-name="#{counter}-address"/>
+                                                           t-attf-name="#{counter}-street"/>
                                                 </div>
                                                 <div class="col-lg my-2">
                                                     <label>City</label>
@@ -47,7 +48,7 @@
                                                 <div class="col-lg my-2">
                                                     <label>State</label>
                                                     <input class='form-control' type='text'
-                                                           t-attf-name="#{counter}-state"/>
+                                                           t-attf-name="#{counter}-state_id"/>
                                                 </div>
                                                 <div class="col-lg my-2">
                                                     <label>Zip</label>
@@ -110,4 +111,20 @@
             </xpath>
         </data>
     </template>
+
+        <record id="view_event_registration_ticket_tree" model="ir.ui.view">
+            <field name="name">event.registration.tree.inherit</field>
+            <field name="model">event.registration</field>
+            <field name="inherit_id" ref="event.view_event_registration_tree" />
+            <field name="arch" type="xml"><data>
+                <xpath expr="//field[@name='state']" position="after">
+                    <field name="street"/>
+                    <field name="city"/>
+                    <field name="state_id"/>
+                    <field name="zip"/>
+                </xpath>
+            </data>
+            </field>
+        </record>
+</data>
 </odoo>

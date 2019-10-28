@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'SANS',
-    'version': '13.0.1.03',
+    'version': '13.0.1.04',
     'category': 'Studio',
     "sequence": 1,
     'website': 'https://restyn-sans-demo.odoo.com/',
@@ -21,6 +21,7 @@ Last Production update:
     'depends': [
         'base',
         'website_event',
+        'website_event_sale',
     ],
     'data': [
         'views/event_templates.xml'
