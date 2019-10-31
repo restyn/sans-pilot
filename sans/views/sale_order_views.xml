@@ -10,7 +10,7 @@
                 <page name="studio_page_xRe5N" string="Attendees">
                   <group name="studio_group_xRe5N">
                     <field name="attendees">
-                      <tree string="Registration" decoration-bf="message_needaction==True">
+                      <tree string="Registration">
                         <field name="event_ticket_id"/>
                         <field name="state"/>
                         <field name="street"/>
@@ -23,7 +23,7 @@
                 </page>
               </xpath>
         </field>
-        <field name="active" eval="False"/>
+        <field name="active" eval="True"/>
     </record>
 
 </odoo>

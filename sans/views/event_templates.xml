@@ -78,12 +78,12 @@
                                     </div>
                                     <t t-foreach="range(1, ticket['quantity'] + 1)" t-as="att_counter"
                                        name="attendee_loop">
+                                        <t t-set="counter" t-value="counter + 1"/>
                                         <t t-set="attendee_placeholder">Attendee #%s</t>
                                         <input type="hidden" t-attf-name="#{counter}-name"
                                                t-att-value="attendee_placeholder %counter"/>
                                         <input class="d-none" type="text" t-attf-name="#{counter}-ticket_id"
                                                t-attf-value="#{ticket['id']}"/>
-                                        <t t-set="counter" t-value="counter + 1"/>
                                     </t>
                                 </t>
                                 <t t-set="counter_type" t-value="counter_type + 1"/>
