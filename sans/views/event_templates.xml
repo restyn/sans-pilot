@@ -124,5 +124,16 @@
             </data>
             </field>
         </record>
+    <record id="event_form_sans" model="ir.ui.view">
+        <field name="name">event.event.view.form.inherit.sans</field>
+        <field name="model">event.event</field>
+        <field name="inherit_id" ref="event.view_event_form"/>
+        <field name="arch" type="xml">
+          <xpath expr="//field[@name='user_id']" position="after">
+            <field name="print_vendor_id" string="Print Vendor"/>
+            <field name="office_location_id" string="Office Location"/>
+          </xpath>
+        </field>
+    </record>
 </data>
 </odoo>

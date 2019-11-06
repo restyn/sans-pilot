@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'SANS',
-    'version': '13.0.1.08',
+    'version': '13.0.1.09',
     'category': 'Studio',
     "sequence": 1,
     'website': 'https://restyn-sans-demo.odoo.com/',
