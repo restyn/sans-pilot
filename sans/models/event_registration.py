@@ -23,7 +23,7 @@ class EventRegistration(models.Model):
             att_data.update({
                 'street': registration.get('street', False),
                 'city': registration.get('city', False),
-                'state_id': registration.get('state', False),
+                'state_id': registration.get('state_id', False),
                 'zip': registration.get('zip', False),
             })
         return att_data
