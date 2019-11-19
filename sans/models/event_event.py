@@ -13,6 +13,10 @@ class Event(models.Model):
         'res.partner', string='Print Vendor',
         tracking=True)
 
-    office_location_id = fields.Many2one(
-        'res.partner', string='Office Location',
+    dropship_location_id = fields.Many2one(
+        'res.partner', string='Dropship Ship Location', help="Dropship Ship Location, defaults to event location",
+        tracking=True)
+
+    warehouse_location_id = fields.Many2one(
+        'res.partner', string='Warehouse Ship Location', help="Warehouse Ship Location, defaults to event location",
         tracking=True)

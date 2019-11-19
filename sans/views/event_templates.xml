@@ -131,7 +131,8 @@
         <field name="arch" type="xml">
           <xpath expr="//field[@name='user_id']" position="after">
             <field name="print_vendor_id" string="Print Vendor"/>
-            <field name="office_location_id" string="Office Location"/>
+            <field name="dropship_location_id" string="Printer ship to address"/>
+            <field name="warehouse_location_id" string="Warehouse ship to address"/>
           </xpath>
         </field>
     </record>
